@@ -388,8 +388,8 @@ class GoogleDriveHelper:
                 buttons.buildbutton("☁️ Drive Link", durl)
                 if mime_type is None:
                     mime_type = 'File'
-                msg += f'\n\n<b>Size: </b>{get_readable_file_size(int(meta.get("size", 0)))}'
-                msg += f'\n\n<b>Type: </b>{mime_type}'
+                msg += f'\n<b>📦 Size: </b>{get_readable_file_size(int(meta.get("size", 0)))}'
+                msg += f'\n<b>🏷 Type: </b>{mime_type}'
                 if INDEX_URL is not None:
                     url_path = rquote(f'{file.get("name")}', safe='')
                     url = f'{INDEX_URL}/{url_path}'
