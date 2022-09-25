@@ -37,7 +37,7 @@ def stats(update, context):
             f'<b>💾 DISK:</b> {disk}%\n\n'\
             f'<b>🎛 Physical Cores:</b> {cpu_count(logical=False)}\n'\
             f'<b>🧮 Total Cores:</b> {cpu_count(logical=True)}\n\n'\
-            f'<b>🗜 SWAP:</b> {get_readable_file_size(swap.total)} | <b>Used:</b> {swap.percent}%\n'\
+            f'<b>🗜 SWAP:</b> {get_readable_file_size(swap.total)} | <b>🕹 Used:</b> {swap.percent}%\n'\
             f'<b>🗄 Memory Total:</b> {get_readable_file_size(memory.total)}\n'\
             f'<b>📉 Memory Free:</b> {get_readable_file_size(memory.available)}\n'\
             f'<b>📈 Memory Used:</b> {get_readable_file_size(memory.used)}\n'
