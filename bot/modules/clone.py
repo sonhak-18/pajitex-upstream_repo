@@ -56,7 +56,7 @@ def _clone(message, bot):
             sleep(4)
             Thread(target=_clone, args=(nextmsg, bot)).start()
         if files <= 20:
-            msg = sendMessage(f"Cloning: <code>{link}</code>", bot, message)
+            msg = sendMessage(f"<b>♻️ Processing:</b>: <code>{link}</code>", bot, message)
             result, button = gd.clone(link)
             deleteMessage(bot, msg)
         else:
@@ -79,7 +79,7 @@ def _clone(message, bot):
                     update_all_messages()
             except IndexError:
                 pass
-        cc = f'\n\n<b>cc: </b>{tag}'
+        cc = f'\n\n<b>👤 cc: </b>{tag}'
         if button in ["cancelled", ""]:
             sendMessage(f"{tag} {result}", bot, message)
         else:
